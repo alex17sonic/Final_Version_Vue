@@ -1,0 +1,249 @@
+:root {
+  --background-color: #C98895;
+  --custom-color: #ffaab8;
+  --new-text-color:white;
+  --font-family: 'Arial', sans-serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header,main, nav, aside, footer {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main{
+  padding-left: 10px;
+}
+
+img {
+  max-width: 100%; /* Ensure images are never wider than their container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.banner {
+  width: 100%;
+  display: flex;
+}
+
+.logo img {
+  height: 70px;
+  margin-right: 40px;
+}
+
+.left-section, .right-section {
+  display: flex;
+  align-items: center;
+  height: 100px;
+ 
+}
+
+
+.left-section {
+ flex: 2;
+  background-color: #0000FF; /* Albastru */
+  justify-content: flex-end;
+  align-items: center;
+  
+}
+
+.right-section {
+  flex: 6;  
+  background-color: #ffaab8; 
+  justify-content: flex-start;
+}
+
+.logo-link1 {
+  font-family: 'Gloria Hallelujah', sans-serif;
+  font-size: 34px; 
+  color: #e9445f; 
+  text-decoration: none; 
+  font-weight: bold;
+  transition: color 0.3s ease; 
+}
+
+.logo-link1:hover {
+  color: #ae374b; 
+}
+
+
+.logo-link2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  color: #0A84FF;
+  text-decoration: none;
+  font-weight: bold; 
+  transition: color 0.3s ease; 
+}
+
+.logo-link2:hover {
+  color: #0066cc; 
+}
+
+nav {
+  display: flex;
+  background: #ffffff;
+  padding: 10px 0;
+  justify-content: center; /* Centrarea conținutului pe verticală */
+   
+}
+
+nav ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  
+  
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+
+nav ul li a {
+  display: inline-block; 
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(to bottom, #0A84FF 0%, #0056b3 100%);
+  padding: 7px 15px;
+  border-radius: 10px;
+  width: 70px; 
+  text-align: center;
+}
+  
+nav ul li a:hover {
+  background: linear-gradient(to bottom, #ffaab8 0%, #ae374b 100%); /* O nuanță mai închisă la hover */
+}
+
+nav ul li a:active, nav ul li a:focus {
+  background: linear-gradient(to bottom, #004494 0%, #002f6c 100%);
+}  
+
+  aside {
+  background: #f6e5c3;
+  padding: 1rem;
+  }
+  aside p {
+  font-variant: small-caps;
+  }
+
+  .derby {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center; /* Centrează elementele pe verticală */
+    background: #f6e5c3;
+      
+      
+  }
+
+  .derby h3 {
+    font-size: 20px;
+    margin: 0; /* elimină marginile implicite */
+  }
+  
+  .derby img {
+      height: 140px; /* Ajustează înălțimea imaginii dacă este necesar */
+      margin-right: 20px; /* Adaugă un spațiu între imagine și text */
+  }
+  
+ 
+  
+  footer {
+      padding: 0.5rem;
+      border-top: 0.1rem solid #877D6C;
+      width: 100%;
+      color: #736B5E;
+      text-align: center;
+  }
+
+  .gloria-hallelujah-regular {
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+@media (min-width: 768px) {
+    .container {
+        display: flex;
+    }
+
+    nav {
+      flex: 0 0 25%;
+      order: -1;
+      border-right: 2px solid var(--custom-color); /* separation line */
+      
+    }
+    .left-section {
+    flex: 0 0 25%; /* Același procent ca și 'nav' pentru aliniere */
+    }
+
+    .right-section {
+    flex: 6;
+    }
+
+
+    main {
+        flex: 3;
+    }
+
+    nav ul li {
+      display: block;
+      margin-bottom: 25px;
+    }
+  }
+
+  @media (max-width: 494px) {
+    nav ul {
+    display: flex; /* Aplică Flexbox pe containerul listei */
+    flex-wrap: nowrap; /* Asigură că elementele nu se vor înfășura pe mai multe rânduri */
+    justify-content: center; /* Centrează elementele pe orizontală */
+    align-items: stretch; /* Elementele se vor întinde pentru a ocupa întreaga înălțime a containerului */
+    padding: 0; /* Resetează padding-ul pentru a elimina spațiul nedorit */
+    }
+
+    nav ul li {
+    flex: 1; /* Distribuie spațiul disponibil egal între elemente */
+    margin: 2px; /* Elimină marginile pentru a permite butoanelor să umple întreaga lățime */
+    
+    }
+
+    nav ul li a {
+    width: 100%; /* Forțează butoanele să ocupe întreaga lățime disponibilă */
+    box-sizing: border-box; /* Include padding-ul și border-ul în calculul lățimii */
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    cursor: pointer;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: #fff;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+  

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mitarbeiterseite</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mystyle.css">
+  <meta name="description" content="Seite mit Informationen über Mitarbeiter">
+</head>
+<body>
+  <header>
+    <div class="banner">
+      <div class="left-section">
+        <a href="index.html" class="logo">
+          <img src="img/logo.png" alt="Sportchroniken Logo">
+        </a>
+        <a href="index.html" class="logo-link1">Sport</a>  
+      </div>
+      <div class="right-section">
+        <a href="index.html" class="logo-link2">Chroniken</a>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="mitarbeiter.html">Mitarbeiter</a></li>
+        <li><a href="#">Archiv</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+    <main>
+        <h1>Unsere Mitarbeiter</h1>
+        <div id="app" class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th @click="sort('vorname')">Vorname</th>
+                <th @click="sort('nachname')">Nachname</th>
+                <th @click="sort('abteilung')">Abteilung</th>
+                <th @click="sort('nr')">Nr.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="mitarbeiter in sortedMitarbeiter" :key="mitarbeiter.nr">
+                <td>{{ mitarbeiter.vorname }}</td>
+                <td>{{ mitarbeiter.nachname }}</td>
+                <td>{{ mitarbeiter.abteilung }}</td>
+                <td>{{ mitarbeiter.nr }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+      
+  </div>
+  <footer>
+    <p>&copy; 2024 Sportchroniken GmbH. Alle Rechte vorbehalten.</p>
+    <p>Kontaktieren Sie uns unter <a href="mailto:info@sportchroniken.de">info@sportchroniken.de</a></p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
