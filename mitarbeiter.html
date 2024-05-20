@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/mystyle.css">
   <meta name="description" content="Seite mit Informationen über Mitarbeiter">
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -37,10 +38,10 @@
           <table>
             <thead>
               <tr>
-                <th @click="sort('vorname')">Vorname</th>
-                <th @click="sort('nachname')">Nachname</th>
-                <th @click="sort('abteilung')">Abteilung</th>
-                <th @click="sort('nr')">Nr.</th>
+                <th @click="sort('vorname')">Vorname &#8595;</th>  <!-- I added arrows for stilistic -->
+                <th @click="sort('nachname')">Nachname &#8595;</th>
+                <th @click="sort('abteilung')">Abteilung &#8595;</th>
+                <th @click="sort('nr')">Nr. &#8595;</th>
               </tr>
             </thead>
             <tbody>
@@ -54,13 +55,12 @@
           </table>
         </div>
       </main>
-      
   </div>
   <footer>
     <p>&copy; 2024 Sportchroniken GmbH. Alle Rechte vorbehalten.</p>
     <p>Kontaktieren Sie uns unter <a href="mailto:info@sportchroniken.de">info@sportchroniken.de</a></p>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="https://unpkg.com/vue@3"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

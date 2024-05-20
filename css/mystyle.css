@@ -1,112 +1,112 @@
-:root {
+  :root {
   --background-color: #C98895;
   --custom-color: #ffaab8;
   --new-text-color:white;
   --font-family: 'Arial', sans-serif;
-}
+  }
 
-body {
+  body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-}
+  }
 
-header,main, nav, aside, footer {
+  header,main, nav, aside, footer {
   padding: 0;
   box-sizing: border-box;
-}
+  }
 
-main{
+  main{
   padding-left: 10px;
-}
+  }
 
-img {
+  img {
   max-width: 100%; /* Ensure images are never wider than their container */
   height: auto; /* Maintain aspect ratio */
-}
+  }
 
-.banner {
+  .banner {
   width: 100%;
   display: flex;
-}
+  }
 
-.logo img {
+  .logo img {
   height: 70px;
   margin-right: 40px;
-}
+  }
 
-.left-section, .right-section {
+  .left-section, .right-section {
   display: flex;
   align-items: center;
   height: 100px;
  
-}
+  }
 
 
-.left-section {
+  .left-section {
  flex: 2;
-  background-color: #0000FF; /* Albastru */
+  background-color: #0000FF; 
   justify-content: flex-end;
   align-items: center;
   
-}
+  }
 
-.right-section {
+  .right-section {
   flex: 6;  
   background-color: #ffaab8; 
   justify-content: flex-start;
-}
+  }
 
-.logo-link1 {
+  .logo-link1 {
   font-family: 'Gloria Hallelujah', sans-serif;
   font-size: 34px; 
   color: #e9445f; 
   text-decoration: none; 
   font-weight: bold;
   transition: color 0.3s ease; 
-}
+  }
 
-.logo-link1:hover {
+  .logo-link1:hover {
   color: #ae374b; 
-}
+  }
 
 
-.logo-link2 {
+  .logo-link2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   color: #0A84FF;
   text-decoration: none;
   font-weight: bold; 
   transition: color 0.3s ease; 
-}
+  }
 
-.logo-link2:hover {
+  .logo-link2:hover {
   color: #0066cc; 
-}
+  }
 
-nav {
+  nav {
   display: flex;
   background: #ffffff;
   padding: 10px 0;
-  justify-content: center; /* Centrarea conținutului pe verticală */
+  justify-content: center; 
    
-}
+  }
 
-nav ul {
+  nav ul {
   padding: 0;
   list-style: none;
   text-align: center;
   
   
-}
+  }
 
-nav ul li {
+  nav ul li {
   display: inline;
   margin-left: 20px;
-}
+  }
 
 
-nav ul li a {
+  nav ul li a {
   display: inline-block; 
   text-decoration: none;
   color: white;
@@ -115,15 +115,15 @@ nav ul li a {
   border-radius: 10px;
   width: 70px; 
   text-align: center;
-}
+  }
   
-nav ul li a:hover {
-  background: linear-gradient(to bottom, #ffaab8 0%, #ae374b 100%); /* O nuanță mai închisă la hover */
-}
+  nav ul li a:hover {
+  background: linear-gradient(to bottom, #ffaab8 0%, #ae374b 100%); /* shadow on hover */
+  }
 
-nav ul li a:active, nav ul li a:focus {
+  nav ul li a:active, nav ul li a:focus {
   background: linear-gradient(to bottom, #004494 0%, #002f6c 100%);
-}  
+  }  
 
   aside {
   background: #f6e5c3;
@@ -136,7 +136,7 @@ nav ul li a:active, nav ul li a:focus {
   .derby {
     display: flex;
     flex-wrap: wrap; 
-    align-items: center; /* Centrează elementele pe verticală */
+    align-items: center; 
     background: #f6e5c3;
       
       
@@ -144,12 +144,12 @@ nav ul li a:active, nav ul li a:focus {
 
   .derby h3 {
     font-size: 20px;
-    margin: 0; /* elimină marginile implicite */
+    margin: 0; /* cut margins */
   }
   
   .derby img {
-      height: 140px; /* Ajustează înălțimea imaginii dacă este necesar */
-      margin-right: 20px; /* Adaugă un spațiu între imagine și text */
+      height: 140px; 
+      margin-right: 20px; /* Space between img and content */
   }
   
  
@@ -168,7 +168,7 @@ nav ul li a:active, nav ul li a:focus {
     font-style: normal;
   }
   
-@media (min-width: 768px) {
+  @media (min-width: 768px) {
     .container {
         display: flex;
     }
@@ -180,7 +180,7 @@ nav ul li a:active, nav ul li a:focus {
       
     }
     .left-section {
-    flex: 0 0 25%; /* Același procent ca și 'nav' pentru aliniere */
+    flex: 0 0 25%; 
     }
 
     .right-section {
@@ -200,22 +200,22 @@ nav ul li a:active, nav ul li a:focus {
 
   @media (max-width: 494px) {
     nav ul {
-    display: flex; /* Aplică Flexbox pe containerul listei */
-    flex-wrap: nowrap; /* Asigură că elementele nu se vor înfășura pe mai multe rânduri */
-    justify-content: center; /* Centrează elementele pe orizontală */
-    align-items: stretch; /* Elementele se vor întinde pentru a ocupa întreaga înălțime a containerului */
-    padding: 0; /* Resetează padding-ul pentru a elimina spațiul nedorit */
+    display: flex; 
+    flex-wrap: nowrap; 
+    justify-content: center; 
+    align-items: stretch; 
+    padding: 0; 
     }
 
     nav ul li {
-    flex: 1; /* Distribuie spațiul disponibil egal între elemente */
-    margin: 2px; /* Elimină marginile pentru a permite butoanelor să umple întreaga lățime */
+    flex: 1; 
+    margin: 2px; 
     
     }
 
     nav ul li a {
-    width: 100%; /* Forțează butoanele să ocupe întreaga lățime disponibilă */
-    box-sizing: border-box; /* Include padding-ul și border-ul în calculul lățimii */
+    width: 100%; 
+    box-sizing: border-box; 
     }
   }
 
@@ -234,6 +234,11 @@ nav ul li a:active, nav ul li a:focus {
     background-color: #f2f2f2;
     cursor: pointer;
   }
+
+  th:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+  }
   
   tbody tr:nth-child(even) {
     background-color: #f9f9f9;
@@ -242,7 +247,7 @@ nav ul li a:active, nav ul li a:focus {
   tbody tr:nth-child(odd) {
     background-color: #fff;
   }
-
+  
   .table-container {
     overflow-x: auto;
   }
